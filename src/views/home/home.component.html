@@ -1,0 +1,265 @@
+
+<section class="home">
+
+
+  <section class="top-bar">
+
+    <div class="is-flexy is-middle">
+
+      <h2>ESTEVAM PELA TAILÂNDIA</h2>
+
+      <Share></Share>
+
+    </div>
+    <div class="is-flexy is-middle" style="height: 100%">
+
+      <span  @click="anchorTo('trip-details')" class="button" title="ITINERÁRIO">ITINERÁRIO</span>
+
+      <span @click="anchorTo('availability')"  class="button is-primary" title="ARANTIR MINHA VAGA">GARANTIR MINHA VAGA</span>
+
+    </div>
+
+  </section>
+
+
+  <!--------------------------------------------------------------------------------- START  : HERO -->
+
+  <section class="trip-hero is-flexy is-middle">
+    
+    <div class="trip-hero--content is-flexy is-column is-left is-middle is-half">
+
+      <ThailandIcon class="country-icon-bg"></ThailandIcon>
+
+      <!-- DATE -->
+      <span class="trip-date">13 Março 2019</span>
+
+      <!-- TITLE -->
+      <h1>ESTEVAM PELA</br>TAILÂNDIA</h1>
+
+      <!-- SUBTITLE -->
+      <h3>Criamos uma trip massa para você curtir com o Estevam pela Tailândia!</h3>
+
+      <!-- INSTAGRAM PROFILE -->
+      <instagram-profile></instagram-profile>
+
+      <!-- SCROLL ICON -->
+      <Scroll class="icon-size--large scroll"></Scroll>
+
+    </div>
+
+    <!-- TRIP MAIN PICTURE -->
+    <figure class="is-half"><img src="https://media.gadventures.com/media-server/cache/38/89/3889f45752d19449f909300bb0b7ad02.jpg" alt="ESTEVAM PELA TAILÂNDIA" class="full-width-img"></figure>
+
+  </section>
+
+  <!--------------------------------------------------------------------------------- END    : HERO -->
+
+  <section class="row">
+
+    <div class="heading-content is-fill is-full is-flexy is-column is-center">
+
+      <DirectionIcon class="icon-size"></DirectionIcon>
+
+      <h4>13 dias inesqueciveis na Tailândia</h4>
+
+      <h2>A viagem que você sempre sonhou em fazer</h2>
+
+      <p>
+        Praias paradisíacas, templos budistas, rica gastronomia, povo acolhedor e técnicas de massagens renomadas. A Tailândia é um dos destinos mais desejados entre os viajantes e não é à toa – o país possui atrações únicas e para agradar todos os gostos. Sabendo disso, a IMANI quer te levar para uma aventura inesquecível neste país. Serão 13 dias explorando as riquezas histórico-cultural dos monumentos, as idílicas ilhas de água azul-turquesa, o seu povo acolhedor e sempre sorridente e a famosa full moon party. Nós cuidaremos de toda a logística para que você possa se preocupar apenas em aproveitar cada momento e criar memórias inesquecíveis.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!--------------------------------------------------------------------------------- START  : CITIES -->
+
+  <div class="row  no-padding-mobile">
+
+    <section class="day-plan-grid is-full" @click="onClickCity">
+
+      <div v-for="(item, index) in cityDetails" :data-index="index" class="block">
+
+        <img v-lazy-load-image  :data-src="item.coverImage" :alt="item.city">
+        <span class="day">DIAS {{ item.days }}</span>
+        <span class="activities">{{ item.sellsTitle }}</span>
+        <span class="place">{{ item.city }}</span>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!--------------------------------------------------------------------------------- END  : CITIES -->
+
+  <!-- CONTENT -->
+  <section id="trip-details"  name="trip-details" class="row">
+
+    <div class="heading-content is-fill is-full is-flexy is-column is-center">
+
+      <Drink class="icon-size"></Drink>
+
+      <h4>Full Moon Party, a festa da lua cheia tailandesa reúne milhares de pessoas</h4>
+
+      <h2>De uma cobertura em Bangkok para  uma vila em Koh Samui</h2>
+
+      <p>
+        Nossa viagem começa pela frenética Bangkok, a cidade que em poucos instantes irá te bombardear de sensações; entre caos, templos budistas, contrastes de cores e arranha-céus.
+        Prepare-se para esquecer tudo o que já leu e já viu sobre Bangkok até agora e permitir se perder no grande caos dessa fascinante cidade Asiática.
+      </p>
+
+      <p>
+        Vamos buscar você no aeroporto e levar para uma cobertura super bem localizada no coraçāo de Bangkok. <br><br>
+        Nosso Drink de recepção estará esperando por você. Comes e bebes típicos e é claro que nāo poderia faltar a famosa massagem tailândesa para você relaxar e se preparar para os melhores 13 dias da tua vida.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!--------------------------------------------------------------------------------- START  : TABS -->
+
+
+  <section class="row is-center no-padding-mobile" name="tabs">
+
+    <div class="features-by-city is-fill is-flexy">
+
+      <tabs :tab-data="cityDetails"></tabs>
+
+    </div>
+
+  </section>
+
+  <!--------------------------------------------------------------------------------- END    : TABS -->
+
+  <section class="row is-center"><Share></Share></section>
+
+
+  <!-- GALLERY WALL -->
+  <section   class="image-gallery full-width-row ">
+
+    <figure><img v-lazy-load-image  data-src="https://media.nomadicmatt.com/thailandguide.jpg" alt=""></figure>
+    <figure><img v-lazy-load-image  data-src="https://wallpapershome.com/images/pages/pic_v/452.jpg" alt=""></figure>
+    <figure><img v-lazy-load-image  data-src="https://luxuryescapes.com/magazine/wp-content/uploads/2017/09/Thailand.jpg" alt=""></figure>
+    <figure><img v-lazy-load-image  data-src="https://similan-islands.com/wp-content/uploads/2015/09/best-islands-in-thailand.jpg" alt=""></figure>
+    <figure><img v-lazy-load-image  data-src="https://static1.squarespace.com/static/555cbc7ee4b059e095f39179/555cc6e7e4b07d15252bb7e6/59a71d6dbe42d66c6ed07521/1504131913376/full-moon-party-thailand.jpg" alt=""></figure>
+
+  </section>
+
+
+  <!-- BOOK -->
+  <section class="row buy-section" name="availability">
+
+    <div class="heading-content is-fill is-full is-flexy is-column is-center">
+
+      <Calendar class="icon-size"></Calendar>
+
+      <h4>Garanta já tua presença</h4>
+
+      <h2>13 dias inesqueciveis pela tailândia</h2>
+
+      <br>
+
+      <h6>13 a 25 de Março 2019</h6>
+
+      <br><br><br>
+
+     <div class="is-flexy is-wrap is-center" style="position: relative">
+
+       <h4 class="price">R$ 6.950</h4>
+
+       <div class="button-wrapper if-flexy is-center is-column is-middle">
+
+         <a href="#" title="GARANTIR MINHA VAGA" class="button is-primary">GARANTIR MINHA VAGA</a>
+
+         <a href="mailto:nataliasclipet@gmail.com" title="Contate o time" class="button is-default">Contate o time</a>
+
+       </div>
+
+     </div>
+
+      <p style="font-size: 16px; margin: 0; text-align: center;">pague em até 12 vezes sem juros no cartāo de credito</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CHECK AVAILABILITY
+  <section name="availability" style="margin-bottom: 50px" class="row">
+
+    <div class="heading-content is-fill is-full is-flexy is-column is-center">
+
+      <Calendar class="icon-size"></Calendar>
+
+      <h4>Selecione a data que você prefere</h4>
+
+      <h2>15 dias inesqueciveis pela tailândia</h2>
+
+      <br><br>
+
+      <CustomDropdown :data="availableDates"></CustomDropdown>
+
+      <br><br>
+
+
+      <div class="button-wrapper if-flexy is-center is-column is-middle">
+
+        <a :href="buyButtonLink" title="GARANTIR MINHA VAGA" class="button is-primary" ref="buy-it-button">GARANTIR MINHA VAGA</a>
+
+        <a href="#" title="Contate o time" class="button">Contate o time</a>
+
+      </div>
+
+    </div>
+
+  </section>
+-->
+
+  <section class="row">
+
+    <div class="heading-content is-fill is-full is-flexy is-column is-center">
+
+      <Important class="icon-size"></Important>
+
+      <h2>Para se lembrar</h2>
+
+      <div class="is-full is-flexy is-column is-center" style="text-align: left; margin-top: 40px">
+
+        <ul style="font-size: 14px; margin-bottom: 30px; width: 100%; max-width: 600px">
+
+          <strong style="font-size: 14px; margin-left: -30px">Muito importante:</strong>
+
+          <li>Passaporte com validade mínima de 6 meses;</li>
+          <li>Para viagens de até 90 dias, não é preciso visto para brasileiros;</li>
+          <li>Apenas bagagem de māo está inclusa nos voos internos;</li>
+          <li>A vacina de febre amarela é obrigatória, sendo comprovante apresentado no Certificado Internacional de Vacinação (CIV).</li>
+          <li>Partir com a mente receptiva e os sentimentos afinados para ser capaz de absorver cheiros, cores, sabores e gestos.</li>
+
+        </ul>
+
+        <ul style="font-size: 14px; width: 100%; max-width: 600px">
+
+          <strong style="font-size: 14px; margin-left: -30px;">O que nāo está incluido:</strong>
+
+          <li>Visto</li>
+          <li>Passagem aérea do Brasil e taxas de embarque.</li>
+          <li>Despesas com documentação.</li>
+          <li>Despesas pessoais como telefonema, lavanderia e gorjeta.</li>
+          <li>Atividades além dos citados neste programa.</li>
+          <li>Refeições e bebidas não citados nos itens incluídos.</li>
+          <li>Qualquer outro item não mencionado como incluído.</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="row is-center"><Share></Share></section>
+
+</section>
+

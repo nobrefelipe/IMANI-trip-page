@@ -1,0 +1,120 @@
+.trip-hero{
+
+  position: relative;
+
+  float: left;
+
+  width: 100%;
+
+  height: 100vh;
+
+  margin-bottom: 50px;
+
+  overflow: hidden;
+
+
+  // COUNTRY MAP BACKGROUND
+  .country-icon-bg{
+
+    position: absolute;
+
+    top: 20%;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-size: contain;
+
+    opacity: 0.07;
+
+    z-index: -1;
+
+    transform: scale(1.6);
+
+    @include tablet{
+
+      transform: scale(1.5);
+
+    }
+  }
+
+
+  &--content{
+
+    position: relative;
+
+    height: 100%;
+
+    padding: 30px 30px 30px 5vw;
+
+
+    .trip-date{
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      font-weight: 400;
+
+      margin-bottom: 5px;
+
+      color: $light-grey;
+
+    }
+
+
+    @include mobile{
+
+      justify-content: flex-start;
+
+      align-items: flex-start;
+
+      min-height: 50%;
+
+      height: auto;
+
+    }
+
+  }
+
+
+  .scroll{
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+  }
+
+
+  figure{
+
+    height: 100%;
+
+  }
+
+
+  @include mobile{
+
+    flex-flow: column-reverse;
+
+    .is-half{ width: 100%;}
+
+    .scroll{ display: none;}
+
+    figure{
+
+      height: 50%;
+
+    }
+
+  }
+
+}

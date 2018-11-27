@@ -1,0 +1,23 @@
+
+//UNITS
+$max-width: 1320px;
+
+//COLORS
+$blue: #00A8FF;
+$light-grey: #989898;
+$grey: #222;
+$red: #ff5252;
+
+
+//CLASSES
+.wrapper{
+
+  width: 100%;
+
+  max-width: $max-width;
+
+  margin: 0 auto;
+
+  padding: 0 15px;
+
+}

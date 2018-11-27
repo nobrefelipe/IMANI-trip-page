@@ -1,0 +1,64 @@
+
+// BASE IMPORTS
+@import "base";
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+
+// CONFIG IMPORTS
+@import "breakpoints";
+@import "typography";
+@import "flexy-layout";
+@import "page-transitions";
+
+
+// SMALL COMPONENTS IMPORTS
+@import "global/icons";
+@import "global/buttons";
+@import "global/classes";
+@import "global/heading-content";
+
+
+// COMPONENTS IMPORTS
+@import "global/components/trip-hero";
+@import "global/components/tabs";
+@import "global/components/custom-dropdrown";
+@import "global/components/image-gallery";
+@import "global/components/top-bar";
+
+
+
+// LAYOUT IMPORTS
+@import "header";
+
+
+//PAGES
+@import "pages/home";
+
+
+
+
+*{
+
+  box-sizing: border-box;
+
+}
+
+html{
+
+  overflow-x: hidden;
+
+}
+
+body{
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #F4F8F9;
+
+  overflow-x: hidden;
+
+}

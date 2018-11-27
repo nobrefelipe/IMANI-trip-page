@@ -1,0 +1,134 @@
+.custom-dropdrown{
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 280px;
+
+  border: 1px solid #ccc;
+
+  height: 50px;
+
+  transition: height .3s cubic-bezier(.29,.94,.93,1);
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  --total-dates: 1;
+
+
+  &.opened{
+
+    height: calc(50px * var(--total-dates));
+
+    &:before{
+
+      transform: rotateX(180deg);
+
+    }
+
+  }
+
+
+  &:after{
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    content: "";
+
+    width: 100%;
+
+    height: 50px;
+
+    z-index: 10;
+
+  }
+
+  &:before{
+
+    content:"\25bc";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 15px;
+
+    font-size: 13px;
+
+    transition: all .3s ease;
+
+  }
+
+
+  ul{
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+
+    flex-flow: column;
+
+  }
+
+
+  .option{
+
+    float: left;
+
+    width: 100%;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-family: 'Fjalla One', sans-serif;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+
+    padding-left: 15px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    order: 1;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+
+    &:hover{
+
+      background: rgba(0,0,0,0.08);
+
+    }
+
+    &.selected{
+
+      order: 0;
+
+    }
+
+
+
+  }
+
+}

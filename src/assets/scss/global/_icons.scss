@@ -1,0 +1,25 @@
+.icon-size{
+
+  float: left;
+
+  width: 30px;
+
+  &--small{
+
+    width: 20px;
+
+  }
+
+  &--medium{
+
+    width: 50px;
+
+  }
+
+  &--large{
+
+    width: 70px;
+
+  }
+
+}

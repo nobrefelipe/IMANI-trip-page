@@ -1,0 +1,187 @@
+
+// DAY PLAN GRID
+.day-plan-grid{
+
+  float: left;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+
+  .block{
+
+    position: relative;
+
+    height: 400px;
+
+    display: flex;
+
+    flex-flow: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    @extend .font-Fjalla;
+
+    &:nth-of-type(1){ width: 25%; }
+    &:nth-of-type(2){ width: 75%; }
+    &:nth-of-type(3){ width: 45%; }
+    &:nth-of-type(4){ width: 55%; }
+    &:nth-of-type(5){ width: 60%; }
+
+
+    &:before{
+
+      content: "";
+
+      background: #000;
+
+      opacity: 0.5;
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      z-index: -1;
+
+      width: 100%;
+
+      height: 100%;
+
+    }
+
+    img{
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: 50% 50%;
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      z-index: -2;
+
+    }
+
+    .day{
+
+      font-size: 28px;
+
+    }
+
+    .activities{
+
+      font-size: 20px;
+
+      margin-top: 10px;
+
+      font-weight: 600;
+
+      font-family: "Montserrat";
+
+    }
+
+    .place{
+
+      font-size: 18px;
+
+      position: absolute;
+
+      bottom: 20px;
+
+      left: 50%;
+
+      transform: translateX(-50%);
+
+    }
+
+
+    @include mobile{
+
+      width: 100% !important;
+
+      height: 220px !important;
+
+      border-right: 0;
+
+    }
+
+  }
+
+}
+
+
+// TRIP FEATURES TAB
+.features-by-city{
+
+  max-width: 990px;
+
+  .tabs{
+
+    &-header{
+
+      justify-content: center;
+
+      @include tablet{
+
+        justify-content: flex-start;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.buy-section{
+
+  .price{
+
+    position: absolute;
+
+    right: -50px;
+
+    transform: translateX(100%);
+
+    color: #222;
+
+    font-size: 30px;
+
+    margin: 15px 0 0 0;
+
+
+    @include mobile{
+
+      width: 100%;
+
+      transform: none;
+
+      position: static;
+
+      margin: 0 0 20px 0;
+
+    }
+
+  }
+
+}

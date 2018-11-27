@@ -1,0 +1,130 @@
+.full-width-img{
+
+  width: 100%;
+
+  height: 100%;
+
+  object-position: 50% 50%;
+
+  object-fit: cover;
+
+}
+
+.full-width-row{
+
+  float: left;
+
+  width: 100%;
+
+}
+
+
+// ROW ELEMENT
+.row{
+
+  float: left;
+
+  width: 100%;
+
+  padding: 50px 0;
+
+  display: flex;
+
+  // spacing before and after the content.
+  // This solution helps keeping the source code drier
+  // as we don't need to add a .wrapper element to box the content
+
+  &:before,
+  &:after{
+
+    content: "";
+
+    float: left;
+
+    width: calc( (100% - #{$max-width}) / 2);
+
+    min-width: 15px;
+
+    height: 1px;
+
+  }
+
+
+  @include tablet{
+
+    padding: 30px 0;
+
+  }
+
+  &.no-padding-mobile{
+
+    &:before,
+    &:after{
+
+      @include tablet{
+
+        min-width: 0px;
+
+      }
+
+    }
+
+
+  }
+
+}
+
+
+// FJALLA FONT FAMILY
+.font-Fjalla{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
+// LAZY LOAD TRANSITION
+img{
+
+  &.lazyload{
+
+    transition: all .3s ease;
+
+    opacity: 0;
+
+  }
+
+  &.loaded{ opacity: 1; }
+
+}
+
+
+// SHOW THE SPINNING LOADING WHILE THE IMAGES ARE LOADING IN LAZY
+.image-loading-bg{
+
+  background-image: url('~/img/loading.svg');
+
+  background-size: 120px;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+}
+
+
+// class appies to images we want to have a zoom in effect as we scroll
+.zoom-with-scroll{
+
+  overflow: hidden;
+
+  img{
+
+    transition: none !important;
+    --multiplier: 0.00015;
+    --scale: calc(1 + var(--scroll-amount) * var(--multiplier));
+    transform: scale3D(var(--scale),var(--scale),var(--scale));
+
+  }
+
+
+}
+

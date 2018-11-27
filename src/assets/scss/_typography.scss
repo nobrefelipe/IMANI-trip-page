@@ -1,0 +1,95 @@
+
+body{
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 18px;
+
+  color: $grey;
+
+  font-weight: 400;
+
+}
+
+a{
+
+  color: $red;
+
+  text-decoration: none;
+
+  transition: all .3s ease;
+
+  &:not(.button){
+
+    &:hover{
+
+      color: $grey;
+
+    }
+
+  }
+
+}
+
+
+p{ margin: 10px 0; line-height: 30px}
+
+h1,h2,h3,h4,h5,h5{margin: 0;}
+
+h1{
+
+  font-weight: 700;
+
+  // dynamic font size
+  font-size: calc(1vw + 3vh + 2vmin);
+
+  margin: 0 0 20px 0;
+
+}
+
+h2{
+
+  font-size: 28px;
+
+  line-height: 33px;
+
+  font-weight: 500;
+
+  font-family: 'Fjalla One', sans-serif;
+
+  @include mobile{
+
+    font-size: 24px;
+
+  }
+
+}
+
+h3{
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+}
+
+
+h5{
+
+  font-size: 15px;
+
+  line-height: 18px;
+
+}
+
+h6{
+
+  font-size: 15px;
+
+  line-height: 18px;
+
+  margin: 0;
+
+  font-family: 'Fjalla One', sans-serif;
+
+}
